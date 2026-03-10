@@ -1,6 +1,6 @@
 # Women in Engineering Portfolio Workshop
 
-Welcome! This template is made for a **beginner-friendly workshop** where you build your own portfolio and deploy it live.
+Welcome! This template is made for the **Women in Engineering Portfolio Workshop** where you build your own portfolio and deploy it live.
 
 You do **not** need to be an expert coder to complete this.
 
