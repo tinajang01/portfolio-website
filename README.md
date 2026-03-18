@@ -1,224 +1,145 @@
 # Women in Engineering Portfolio Workshop
 
-Welcome! This template is made for the **Women in Engineering Portfolio Workshop** where you build your own portfolio and deploy it live.
+Welcome. This repo is a beginner-friendly template for the Women in Engineering portfolio workshop.
 
-You do **not** need to be an expert coder to complete this.
+You will customize placeholder content, personalize colors, and deploy your site.
 
----
+## What You Are Building
 
-## What you are building
+A one-page portfolio with these sections:
 
-You are creating a one-page personal portfolio with:
-
-- Hero section (your intro)
-- About section
-- Projects section
-- Contact section
+- Hero
+- About
+- Experience (with resume download button)
+- Projects
+- Contact
 
 Tech stack:
 
 - React + Vite
 - Tailwind CSS
-- Vercel for deployment
+- Vercel (deployment)
 
----
+## Current Color Palette
 
-## Before you start
+This template currently uses:
 
-Please install:
+- #3A405A (primary text / dark accent)
+- #AEC5EB (borders / cool accent)
+- #F9DEC9 (light card backgrounds)
+- #E9AFA3 (hover and warm accents)
+- #685044 (secondary text / dark warm accent)
 
-1. [Node.js](https://nodejs.org/) (version 20+ recommended)
-2. [VS Code](https://code.visualstudio.com/)
-3. A GitHub account
-4. A Vercel account (you can sign in with GitHub)
+## Setup
 
-To check Node and npm in your terminal:
+Install first:
 
-```bash
+1. Node.js (v20+ recommended)
+2. VS Code
+3. GitHub account
+4. Vercel account
+
+Check your versions:
+
 node -v
 npm -v
-```
 
-If both show version numbers, you’re good.
+Run locally:
 
----
-
-## Quick start (copy and paste)
-
-In terminal, from this project folder:
-
-```bash
 npm install
 npm run dev
-```
 
-Then open the URL shown in terminal (usually `http://localhost:5173`).
+Open the local URL shown in terminal (usually http://localhost:5173).
 
----
+## File Guide
 
-## File guide (the only files you really need)
+Main files participants will edit:
 
-- `src/App.jsx` → main content on the page
-- `src/index.css` → global styles + Tailwind import
-- `README.md` → this guide
+- src/components/Header.jsx
+- src/components/HeroSection.jsx
+- src/components/AboutSection.jsx
+- src/components/ExperienceSection.jsx
+- src/components/ProjectsSection.jsx
+- src/components/ContactSection.jsx
+- src/data/projects.js
+- src/index.css
 
----
+Page assembly happens in:
 
-## Beginner editing guide (no stress version)
+- src/App.jsx
 
-### 1) Update your name + intro
+## Workshop Editing Guide
 
-Open `src/App.jsx` and find the top section.
+1. Update name and hero intro
 
-Replace:
+- Edit text in src/components/Header.jsx and src/components/HeroSection.jsx.
+- Replace [Your Name], [Your Role], and the intro paragraph.
 
-- `YOUR NAME`
-- headline text
-- intro paragraph
+2. Add profile image
 
-### 1.5) Add your profile photo
+- Replace src/assets/profile-pic.jpg with your photo (same filename), or update the import path in src/components/HeroSection.jsx.
 
-In the hero section, there is a placeholder circle that says `Add Profile Photo`.
+3. Update About section
 
-Replace that placeholder with an `<img />` tag once you have a photo URL, or keep it as-is during the workshop.
+- Edit src/components/AboutSection.jsx with 3-5 sentences about your interests and goals.
 
-Tip: Keep your intro to 2–3 lines.
+4. Update Experience section
 
-### 2) Update About section
+- Edit the experiences array in src/components/ExperienceSection.jsx.
+- Add your internship, leadership, volunteering, or research details.
 
-In `About Me`, write:
+5. Add your resume
 
-- What you study/work on
-- What interests you in engineering/tech
-- What opportunities you’re looking for
+- Put your PDF at public/resume.pdf.
+- The Download Resume button in src/components/ExperienceSection.jsx already links to this path.
 
-### 3) Update project cards
+6. Update Projects
 
-At the top of `src/App.jsx`, edit the `projects` array.
+- Edit src/data/projects.js.
+- Each project includes title, description, and tech.
 
-Each project has:
+7. Update Contact
 
-- `title`
-- `description`
-- `tech`
+- Edit src/components/ContactSection.jsx with your email and links.
 
-If you only have 1–2 projects, that’s totally okay.
+## Build And Deploy
 
-### 4) Update contact section
+Build check:
 
-Add your:
-
-- email
-- LinkedIn
-- GitHub (if you have one)
-
----
-
-## Optional customizations (easy wins)
-
-In `src/App.jsx`, you can change colors quickly by replacing class names like:
-
-- `slate-*`
-- `zinc-*`
-- `neutral-*`
-
-Examples:
-
-- `bg-slate-900` → `bg-zinc-900`
-- `text-slate-600` → `text-neutral-600`
-
----
-
-## If you are totally new to coding
-
-Use this pattern:
-
-1. Change one small line.
-2. Save the file.
-3. Refresh browser and check result.
-4. If something breaks, undo (`Cmd + Z`).
-
-That’s it. Small edits are the safest path.
-
----
-
-## Build check before deploy
-
-Run:
-
-```bash
 npm run build
-```
 
-If this passes, you’re ready to deploy.
+Deploy with Vercel:
 
----
-
-## Deploy to Vercel (recommended path)
-
-### Step A — Push to GitHub
-
-If you haven’t already:
-
-```bash
-git add .
-git commit -m "workshop portfolio"
-git push
-```
-
-### Step B — Import in Vercel
-
-1. Go to [https://vercel.com](https://vercel.com)
-2. Click **Add New Project**
-3. Import your GitHub repo
-4. Keep defaults (Vercel detects Vite)
-5. Click **Deploy**
+1. Push your repo to GitHub.
+2. Import the repo into Vercel.
+3. Use defaults for a Vite app.
+4. Deploy.
 
 Expected values:
 
-- Framework Preset: `Vite`
-- Build Command: `npm run build`
-- Output Directory: `dist`
-
----
+- Framework Preset: Vite
+- Build Command: npm run build
+- Output Directory: dist
 
 ## Troubleshooting
 
-### Problem: `npm install` fails
+If npm install fails:
 
-Try:
-
-```bash
 rm -rf node_modules package-lock.json
 npm install
-```
 
-### Problem: Dev server won’t start
+If styles are missing, verify:
 
-Close old terminals and run:
+- src/index.css includes @import 'tailwindcss';
+- src/main.jsx imports ./index.css
+- vite.config.js includes the Tailwind Vite plugin
 
-```bash
-npm run dev
-```
-
-### Problem: Styles are missing
-
-Check:
-
-- `vite.config.js` contains `@tailwindcss/vite`
-- `src/index.css` contains `@import 'tailwindcss';`
-- `src/main.jsx` imports `./index.css`
-
----
-
-## Suggested workshop pacing (for mentors)
+## Suggested Workshop Pacing
 
 - 10 min: setup + run locally
-- 20 min: hero/about/contact
-- 20 min: project cards + styling
-- 10 min: GitHub push
-- 10 min: Vercel deploy + share links
+- 20 min: hero + about
+- 20 min: experience + projects
+- 10 min: contact + final polish
+- 10 min: deploy + share links
 
----
-
-You belong in engineering spaces. Ship your site and be proud of it.
+Ship your portfolio. Keep it real, personal, and proudly yours.
