@@ -1,5 +1,9 @@
 # Women in Engineering Portfolio Workshop
 
+![Deploy To GitHub Pages](https://github.com/<your-github-username>/<your-repo-name>/actions/workflows/deploy-pages.yml/badge.svg)
+
+Replace `<your-github-username>` and `<your-repo-name>` in the badge URL after you create your GitHub repo.
+
 Welcome! This template is made for the **Women in Engineering Portfolio Workshop** where you build your own portfolio and deploy it live.
 
 You do **not** need to be an expert coder to complete this.
@@ -19,7 +23,7 @@ Tech stack:
 
 - React + Vite
 - Tailwind CSS
-- Vercel for deployment
+- GitHub Pages for deployment
 
 ---
 
@@ -30,7 +34,6 @@ Please install:
 1. [Node.js](https://nodejs.org/) (version 20+ recommended)
 2. [VS Code](https://code.visualstudio.com/)
 3. A GitHub account
-4. A Vercel account (you can sign in with GitHub)
 
 To check Node and npm in your terminal:
 
@@ -171,7 +174,7 @@ If this passes, you’re ready to deploy.
 
 ---
 
-## Deploy to Vercel (recommended path)
+## Deploy to GitHub Pages
 
 ### Step A — Push to GitHub
 
@@ -183,19 +186,48 @@ git commit -m "workshop portfolio"
 git push
 ```
 
-### Step B — Import in Vercel
+### Step B — Install deploy dependency
 
-1. Go to [https://vercel.com](https://vercel.com)
-2. Click **Add New Project**
-3. Import your GitHub repo
-4. Keep defaults (Vercel detects Vite)
-5. Click **Deploy**
+```bash
+npm install
+```
 
-Expected values:
+### Step C — Deploy
 
-- Framework Preset: `Vite`
-- Build Command: `npm run build`
-- Output Directory: `dist`
+```bash
+npm run deploy
+```
+
+This publishes your site to the `gh-pages` branch.
+
+### Step D — Enable Pages in GitHub (one-time)
+
+1. Open your repo on GitHub.
+2. Go to **Settings** -> **Pages**.
+3. Under **Build and deployment**, choose one source:
+   - **Deploy from a branch** (for manual deploy using `npm run deploy`)
+   - **GitHub Actions** (for automatic deploy on every push to `main`)
+4. If you picked **Deploy from a branch**, select branch **gh-pages** and folder **/ (root)**.
+5. Save.
+
+Your live URL will be:
+
+- `https://<your-github-username>.github.io/<your-repo-name>/`
+
+Important: this template uses `package.json` name for the GitHub Pages path.
+
+- Current package name: `portfolio-website`
+- If your repo name is different, either rename your GitHub repo to match, or update the `build:gh` script in `package.json`.
+
+### Optional: Automatic deploy with GitHub Actions
+
+This repo includes a workflow at `.github/workflows/deploy-pages.yml` that deploys on every push to `main`.
+
+Setup:
+
+1. Commit and push this workflow file.
+2. In GitHub -> **Settings** -> **Pages**, set **Source** to **GitHub Actions**.
+3. Push to `main` and the site will deploy automatically.
 
 ---
 
@@ -234,7 +266,7 @@ Check:
 - 20 min: hero/about/contact
 - 20 min: project cards + styling
 - 10 min: GitHub push
-- 10 min: Vercel deploy + share links
+- 10 min: GitHub Pages deploy + share links
 
 ---
 
