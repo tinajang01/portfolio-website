@@ -125,16 +125,24 @@ Add your:
 
 ## Optional customizations (easy wins)
 
-In `src/App.jsx`, you can change colors quickly by replacing class names like:
+### Super easy color palette swap (2-3 minutes)
 
-- `slate-*`
-- `zinc-*`
-- `neutral-*`
+Use [https://coolors.co/](https://coolors.co/) to generate a palette you like.
 
-Examples:
+Then do this in VS Code:
 
-- `bg-slate-900` → `bg-zinc-900`
-- `text-slate-600` → `text-neutral-600`
+1. Press `Cmd + Shift + H` (Replace in Files).
+2. Replace the old colors below with your new hex colors (include the `#`).
+
+Current template colors:
+
+- `#3A405A` (main text / headings)
+- `#AEC5EB` (borders)
+- `#F9DEC9` (cards / light backgrounds)
+- `#E9AFA3` (hover / accents)
+- `#685044` (secondary text)
+
+Tip: Replace one color at a time, then save and check your browser.
 
 ---
 
