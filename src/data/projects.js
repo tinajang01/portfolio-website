@@ -1,6 +1,6 @@
 export const projects = [
   {
-    title: 'Campus Connect',
+    title: 'JAKT Transfurniture',
     description: 'A student resource app to find events, clubs, and opportunities.',
     tech: 'React · Tailwind · Firebase',
   },
