@@ -2,7 +2,7 @@ export const projects = [
   {
     title: 'JAKT Transfurniture',
     description: 'A student resource app to find events, clubs, and opportunities.',
-    tech: 'SolidWorks · Tailwind · Firebase',
+    tech: 'SolidWorks · Frame · Firebase',
   },
   {
     title: 'Skill Spark',
