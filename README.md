@@ -35,21 +35,49 @@ This template currently uses:
 Install first:
 
 1. Node.js (v20+ recommended)
-2. VS Code
-3. GitHub account
-4. Vercel account
+2. Git
+3. VS Code
+4. GitHub account
+5. Vercel account
 
-Check your versions:
+### 1. Clone the repository
 
+Choose where you want the project folder, then run:
+
+```bash
+git clone <your-repo-url>
+cd portfolio-website
+```
+
+If you already have the project folder locally, just `cd` into it.
+
+### 2. Check your versions
+
+```bash
 node -v
 npm -v
+git --version
+```
 
-Run locally:
+### 3. Install dependencies
 
+```bash
 npm install
+```
+
+### 4. Start the development server
+
+```bash
 npm run dev
+```
 
 Open the local URL shown in terminal (usually http://localhost:5173).
+
+### 5. Optional: Build check
+
+```bash
+npm run build
+```
 
 ## File Guide
 
