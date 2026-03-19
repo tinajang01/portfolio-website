@@ -2,29 +2,44 @@ import profilePic from '../assets/profile-pic.jpg'
 
 function HeroSection() {
   return (
-    <section className="grid items-center gap-8 rounded-2xl border border-sky-100 bg-white p-8 shadow-sm md:grid-cols-[1fr_220px] md:p-10">
-      <div>
-        <p className="text-sm font-medium uppercase tracking-[0.2em] text-blue-500">Portfolio Website</p>
-        <h1 className="mt-4 max-w-3xl text-4xl font-bold leading-tight md:text-5xl">
-          Hi, I&apos;m Your Name. I do xyz.
+    <section className="hero-grid relative overflow-hidden rounded-3xl border border-[#AEC5EB] bg-[#F9DEC9] p-8 shadow-sm md:grid md:grid-cols-[1fr_280px] md:gap-10 md:p-12">
+      <div className="relative z-10">
+         
+        <h1 className="mt-5 max-w-3xl text-4xl font-black leading-tight text-[#3A405A] md:text-6xl">
+          Hi, I&apos;m [Your Name].
+          <span className="hero-accent-text"> I&apos;m a [Your Role].</span>
         </h1>
-        <p className="mt-4 max-w-2xl text-slate-600">
-          Replace this with a short intro about who you are, what you work on, and what opportunities
-          you are looking for.
+
+        <p className="mt-5 max-w-2xl text-base leading-relaxed text-[#685044] md:text-lg">
+          Replace this with 2-3 lines about your focus, interests, and the impact you want to create in engineering.
         </p>
-        <a
-          href="#projects"
-          className="mt-6 inline-block rounded-lg bg-blue-600 px-5 py-2.5 font-medium text-white hover:bg-blue-700"
-        >
-          View Projects
-        </a>
+
+        <div className="mt-8 flex flex-wrap gap-3">
+          <a
+            href="#projects"
+            className="inline-flex items-center rounded-lg bg-[#3A405A] px-5 py-2.5 text-sm font-semibold text-[#F9DEC9] transition hover:-translate-y-0.5 hover:bg-[#685044]"
+          >
+            View Projects
+          </a>
+          <a
+            href="#contact"
+            className="inline-flex items-center rounded-lg border border-[#AEC5EB] bg-[#AEC5EB] px-5 py-2.5 text-sm font-semibold text-[#3A405A] transition hover:-translate-y-0.5 hover:border-[#E9AFA3] hover:bg-[#E9AFA3]"
+          >
+            Contact Me
+          </a>
+        </div>
+
       </div>
 
-      <img
-        src={profilePic}
-        alt="Profile"
-        className="mx-auto h-44 w-44 rounded-full border-2 border-sky-200 object-cover"
-      />
+      <div className="relative z-10 mt-8 grid place-items-center md:mt-0">
+        <div className="hero-float rounded-[2rem] border border-[#AEC5EB] bg-[#F9DEC9] p-4 shadow-lg">
+          <img
+            src={profilePic}
+            alt="Profile"
+            className="h-56 w-56 rounded-[1.5rem] border border-[#E9AFA3] object-cover"
+          />
+        </div>
+      </div>
     </section>
   )
 }
